@@ -26,6 +26,22 @@ export const useHelper = () => {
           : names[0]?.charAt(0);
       return initials;
     },
+    getFormattedCurrency: (amount) => {
+      if (amount >= 1_000_000) {
+        return (amount / 1_000_000).toFixed(1) + "M";
+      } else if (amount >= 1_000) {
+        return (amount / 1_000).toFixed(1) + "k";
+      } else {
+        return amount.toString();
+      }
+    },
+    getTotalCount: (count, isCurrency) => {
+      if (isCurrency) {
+        return "₹" + " " + count
+      } else {
+        return count;
+      }
+    },
     getUserRatings: (rating) => {
       const res = [1, 2, 3, 4, 5].map((c, i) => {
         if (i < rating) {

@@ -2,7 +2,7 @@ import React from "react";
 import { useHelper } from "../../../hooks/useHelper";
 
 export const TotalListCard = ({ info }) => {
-  const { getProfitOrLoss } = useHelper();
+  const { getProfitOrLoss, getTotalCount, getFormattedCurrency } = useHelper();
   return (
     <div className="grid grid-cols-2 md:col-span-1 col-span-2 p-4 rounded-md dark:bg-[--bg] dark:text-[--title] sun w-full">
       <div className="flex col-span-2">
@@ -16,7 +16,9 @@ export const TotalListCard = ({ info }) => {
         {info.title}
       </div>
       <div className="flex justify-between col-span-2 mt-2">
-        <span className="flex items-end text-3xl font-bold">{info?.count}</span>
+        <span className="flex items-end text-3xl font-bold">
+          {getTotalCount(getFormattedCurrency(info?.count), info?.countInRupees)}
+        </span>
         <div className="content-end text-[12px] font-semibold ">
           {getProfitOrLoss(info?.inProfit, info?.profitPercentage)}
         </div>

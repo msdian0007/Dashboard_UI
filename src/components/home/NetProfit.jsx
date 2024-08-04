@@ -4,7 +4,7 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 const NetProfit = () => {
-  const { getProfitOrLoss } = useHelper();
+  const { getProfitOrLoss, getTotalCount, getFormattedCurrency } = useHelper();
   const percentage = 77;
 
   return (
@@ -13,7 +13,9 @@ const NetProfit = () => {
         <div className="text-[12px] font-semibold dark:text-[--desc]">
           Net Profit
         </div>
-        <div className="content-center text-3xl font-semibold">2450</div>
+        <div className="content-center text-3xl font-semibold">
+          {getTotalCount(getFormattedCurrency(67250), true)}
+        </div>
         <div className="flex !justify-start text-[12px] font-semibold">
           {getProfitOrLoss(false, 4)}
         </div>

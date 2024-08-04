@@ -5,22 +5,22 @@ import { recentOrders } from "../../constants";
 const columns = [
   {
     title: "CustomerName",
-    key: "customerName",
+    key: "id",
     dataIndex: "customerName",
   },
   {
     title: "OrderNo",
-    key: "orderNo",
+    key: "id",
     dataIndex: "orderNo",
   },
   {
     title: "Amount",
-    key: "amount",
+    key: "id",
     dataIndex: "amount",
   },
   {
     title: "Status",
-    key: "status",
+    key: "id",
     dataIndex: "status",
     render: (_, record) => {
       if (record.status === 1) {
@@ -38,12 +38,14 @@ const RecentOrders = () => {
   return (
     <div className="pt-4 ">
       <span className="pb-2 text-lg font-bold">Recent Orders</span>
-      <div className="overflow-auto max-h-[325px]">
+      <div className="overflow-x-scroll max-h-[325px]">
         <Table
           dataSource={recentOrders}
           columns={columns}
+          expandable={true}
+          className=""
           // style={{borderRadius:'0%'}}
-          rowClassName={"dark:bg-[--bg] dark:text-[--desc] hover:text-[--bg]"}
+          rowClassName={"dark:bg-[--bg] dark:text-[--desc] hover:text-[--bg] "}
         />
       </div>
     </div>

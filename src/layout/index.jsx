@@ -14,7 +14,7 @@ export const MainLayout = ({ children }) => {
       <div className="dark:bg-[--bg-d]">
         <Navbar {...props} />
         <SideMenus {...props} />
-        <MaskScreen {...props} />
+        <MaskScreen isOn={isOpenSideModal} />
         <div className="mt-[60px] lg:ml-[60px] transition-all ">{children}</div>
       </div>
     </>

@@ -1,11 +1,11 @@
 import React from "react";
 
-export const MaskScreen = ({ isOpenSideModal }) => {
+export const MaskScreen = ({ isOn }) => {
   return (
     <div
       className={`${
-        isOpenSideModal ? "block lg:hidden " : "hidden"
-      } fixed inset-0 top-0 z-20 h-screen bg-black/70`}
+        isOn ? "block lg:hidden " : "hidden"
+      } fixed inset-0 top-[60px] z-20 h-[calc(100vh-60px)] bg-black/70`}
     ></div>
   );
 };

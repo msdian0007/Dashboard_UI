@@ -45,9 +45,9 @@ export const totalCardsInfo = [
   {
     id: 4,
     title: "Total Revenue",
-    count: 12000,
+    count: 120000,
     icon: <RiMoneyRupeeCircleFill />,
-    countInRupees: false,
+    countInRupees: true,
     profitPercentage: 3,
     inProfit: true,
     css: "text-pink-500 bg-pink-500/20",

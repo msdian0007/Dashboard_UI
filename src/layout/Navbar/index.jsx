@@ -2,69 +2,18 @@ import React, { useState } from "react";
 import { Profile } from "./Profile";
 import { NavList } from "./NavList";
 import { SearchBar } from "./SearchBar";
-import { FaBell, FaCanadianMapleLeaf } from "react-icons/fa";
-import { MdMenu, MdOutlineMail } from "react-icons/md";
-import { Dropdown } from "antd";
-import { CgProfile } from "react-icons/cg";
-import { IoSettingsOutline } from "react-icons/io5";
-import { IoMdLogOut } from "react-icons/io";
-
-const items = [
-  {
-    label: "Mail",
-    key: "0",
-    icon: (
-      <div className="text-green-500">
-        <MdOutlineMail className="text-xl" />
-      </div>
-    ),
-  },
-  {
-    label: "Notification",
-    key: "1",
-    icon: (
-      <div className="text-orange-500">
-        <FaBell className="text-xl" />
-      </div>
-    ),
-  },
-  {
-    label: "Setting",
-    key: "2",
-    icon: (
-      <div className="text-slate-500">
-        <IoSettingsOutline className="text-xl" />
-      </div>
-    ),
-  },
-  {
-    type: "divider",
-  },
-  {
-    label: "Profile",
-    key: "3",
-    icon: (
-      <div className="text-blue-500">
-        <CgProfile className="text-xl" />
-      </div>
-    ),
-  },
-  {
-    type: "divider",
-  },
-  {
-    label: "SignOut",
-    key: "4",
-    icon: (
-      <div className="text-red-500">
-        <IoMdLogOut className="text-xl" />
-      </div>
-    ),
-  },
-];
+import { FaCanadianMapleLeaf } from "react-icons/fa";
+import { MdMenu } from "react-icons/md";
+import { MenuBar } from "../Menubar";
+import { MaskScreen } from "../../utils/MaskScreen";
+import { RxCross1, RxCross2 } from "react-icons/rx";
 
 export const Navbar = ({ setIsOpenSideModal, isOpenSideModal }) => {
   const [openMenus, setOpenMenus] = useState(false);
+  let props = {
+    openMenus,
+    setOpenMenus,
+  };
   return (
     <div className="fixed inset-0 top-0 flex max-h-[60px] dark:bg-[--bg] dark:text-[--title] sun z-50">
       <div className="flex min-w-[60px] justify-center">
@@ -81,18 +30,17 @@ export const Navbar = ({ setIsOpenSideModal, isOpenSideModal }) => {
           <NavList />
           <Profile />
         </div>
-        <Dropdown
-          menu={{
-            items,
-          }}
-          trigger={["click"]}
-        >
-          <div className="flex md:hidden">
-            <span className="content-center text-3xl cursor-pointer">
-              <MdMenu onClick={() => setOpenMenus(true)} />
-            </span>
-          </div>
-        </Dropdown>
+        <div className="flex md:hidden">
+          <span className="content-center text-3xl cursor-pointer">
+            {openMenus ? (
+              <RxCross2 onClick={() => setOpenMenus(!openMenus)} />
+            ) : (
+              <MdMenu onClick={() => setOpenMenus(!openMenus)} />
+            )}
+          </span>
+        </div>
+        <MenuBar {...props} />
+        <MaskScreen isOn={openMenus} />
       </div>
     </div>
   );
