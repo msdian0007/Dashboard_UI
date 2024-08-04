@@ -8,7 +8,7 @@ export const PopularListCard = ({ info }) => {
         <div className="p-4 text-2xl text-orange-600 rounded-full bg-orange-400/20">
           {info?.icon}
         </div>
-        <div className="text-[--desc]">{info?.title}</div>
+        <div className="dark:text-[--desc]">{info?.title}</div>
       </div>
       <div className="text-2xl text-[--bg-l] cursor-pointer hover:text-slate-400">
         <IoIosArrowDroprightCircle />

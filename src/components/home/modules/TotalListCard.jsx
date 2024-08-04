@@ -1,5 +1,4 @@
 import React from "react";
-import { FaShoppingBasket } from "react-icons/fa";
 import { useHelper } from "../../../hooks/useHelper";
 
 export const TotalListCard = ({ info }) => {

@@ -1,11 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { MainLayout } from "./layout";
-import { Home } from "./pages/Home";
+import Home from "./pages/Home";
 import { Orders } from "./pages/Orders";
 import { Statistics } from "./pages/Statistics";
 import { Store } from "./pages/Store";
 import { Wallet } from "./pages/Wallet";
+import React from "react";
 
 function App() {
   return (

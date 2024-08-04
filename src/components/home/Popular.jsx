@@ -2,7 +2,7 @@ import React from "react";
 import { PopularListCard } from "./modules/PopularListCard";
 import { popularList } from "../../constants";
 
-export const Popular = () => {
+const Popular = () => {
   return (
     <div className="grid items-center h-full">
       <div className="grid gap-3 ">
@@ -13,3 +13,5 @@ export const Popular = () => {
     </div>
   );
 };
+
+export default Popular;

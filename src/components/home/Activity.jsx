@@ -15,7 +15,7 @@ const items = [
   },
 ];
 
-export const Activity = () => {
+const Activity = () => {
   const [options, setOptions] = useState(items[0]?.label);
   const onClick = ({ key }) => {
     setOptions(items.filter((i) => i.key === key)[0]?.label);
@@ -30,7 +30,7 @@ export const Activity = () => {
             onClick,
           }}
         >
-          <span className="flex items-center gap-2 bg-[--bg-l] px-2 rounded-full text-xs h-5">
+          <span className="flex items-center gap-2 dark:bg-[--bg-l] bg-[--desc] px-2 rounded-full text-xs h-5">
             {options}
             <FaCaretDown />
           </span>
@@ -43,3 +43,5 @@ export const Activity = () => {
     </div>
   );
 };
+
+export default Activity;

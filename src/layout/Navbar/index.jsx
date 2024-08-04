@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { Profile } from "./Profile";
 import { NavList } from "./NavList";
 import { SearchBar } from "./SearchBar";
-import { FcPuzzle } from "react-icons/fc";
 import { FaBell, FaCanadianMapleLeaf } from "react-icons/fa";
 import { MdMenu, MdOutlineMail } from "react-icons/md";
-import { Drawer, Dropdown, Menu } from "antd";
+import { Dropdown } from "antd";
 import { CgProfile } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoMdLogOut } from "react-icons/io";
@@ -82,11 +81,6 @@ export const Navbar = ({ setIsOpenSideModal, isOpenSideModal }) => {
           <NavList />
           <Profile />
         </div>
-        {/* <div className="flex md:hidden">
-          <span className="content-center text-3xl cursor-pointer">
-            <MdMenu onClick={() => setOpenMenus(true)} />
-          </span>
-        </div> */}
         <Dropdown
           menu={{
             items,

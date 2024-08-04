@@ -2,7 +2,7 @@ import React from "react";
 import { FeedbackCard } from "./modules/FeedbackCard";
 import { customerFeedback } from "../../constants";
 
-export const CustomersFeedback = () => {
+const CustomersFeedback = () => {
   return (
     <div className="pt-4">
       <span className="mb-4 text-lg font-bold">Customers Feedback</span>
@@ -14,3 +14,5 @@ export const CustomersFeedback = () => {
     </div>
   );
 };
+
+export default CustomersFeedback

@@ -50,9 +50,9 @@ export const SideMenus = ({ isOpenSideModal, setIsOpenSideModal }) => {
             onClick={(e) => setPath(m.path)}
             className={`${
               m.path === path
-                ? " border-l-[3px] border-blue-500 text-blue-500 "
+                ? " border-l-[3px] border-blue-500 !text-blue-500 "
                 : ""
-            }text-[--desc] cursor-pointer flex justify-center py-2 text-xl`}
+            }dark:text-[--desc]  cursor-pointer flex justify-center py-2 text-xl`}
           >
             {m.icon}
           </Link>

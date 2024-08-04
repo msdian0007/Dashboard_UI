@@ -11,15 +11,12 @@ export const MainLayout = ({ children }) => {
   };
   return (
     <>
-      <Navbar {...props} />
-      <SideMenus {...props} />
-      <MaskScreen {...props} />
-      <div
-        className={`${
-          isOpenSideModal ? "block lg:hidden " : "hidden"
-        } fixed inset-0 top-0 z-20 h-screen bg-black/70`}
-      ></div>
-      <div className="mt-[60px] lg:ml-[60px] transition-all ">{children}</div>
+      <div className="dark:bg-[--bg-d]">
+        <Navbar {...props} />
+        <SideMenus {...props} />
+        <MaskScreen {...props} />
+        <div className="mt-[60px] lg:ml-[60px] transition-all ">{children}</div>
+      </div>
     </>
   );
 };

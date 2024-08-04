@@ -34,7 +34,7 @@ const columns = [
   },
 ];
 
-export const RecentOrders = () => {
+const RecentOrders = () => {
   return (
     <div className="pt-4 ">
       <span className="pb-2 text-lg font-bold">Recent Orders</span>
@@ -43,9 +43,11 @@ export const RecentOrders = () => {
           dataSource={recentOrders}
           columns={columns}
           // style={{borderRadius:'0%'}}
-          rowClassName={"bg-[--bg] text-[--desc] hover:text-[--bg]"}
+          rowClassName={"dark:bg-[--bg] dark:text-[--desc] hover:text-[--bg]"}
         />
       </div>
     </div>
   );
 };
+
+export default RecentOrders;
