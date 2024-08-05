@@ -37,7 +37,7 @@ export const useHelper = () => {
     },
     getTotalCount: (count, isCurrency) => {
       if (isCurrency) {
-        return "₹" + " " + count
+        return "₹" + count
       } else {
         return count;
       }

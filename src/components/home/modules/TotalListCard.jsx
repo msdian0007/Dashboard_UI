@@ -17,7 +17,10 @@ export const TotalListCard = ({ info }) => {
       </div>
       <div className="flex justify-between col-span-2 mt-2">
         <span className="flex items-end text-3xl font-bold">
-          {getTotalCount(getFormattedCurrency(info?.count), info?.countInRupees)}
+          {getTotalCount(
+            getFormattedCurrency(info?.count),
+            info?.countInRupees
+          )}
         </span>
         <div className="content-end text-[12px] font-semibold ">
           {getProfitOrLoss(info?.inProfit, info?.profitPercentage)}
