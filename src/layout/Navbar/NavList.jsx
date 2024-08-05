@@ -17,7 +17,7 @@ export const NavList = () => {
         <span className=" bg-[--bg-l] rounded-full text-[--desc] h-6 p-1 cursor-pointer">
           <FaBell />
         </span>
-        {/* <DarkMode /> */}
+        <DarkMode />
       </div>
     </>
   );

@@ -4,7 +4,7 @@ import { GoHomeFill } from "react-icons/go";
 import { IoMdStats } from "react-icons/io";
 import { LuWallet } from "react-icons/lu";
 import { MdOutlineStorefront } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const menuList = [
   {
@@ -34,7 +34,9 @@ const menuList = [
   },
 ];
 export const SideMenus = ({ isOpenSideModal, setIsOpenSideModal }) => {
-  const [path, setPath] = useState(window.location?.pathname);
+  const { pathname } = useLocation();
+  const [path, setPath] = useState(pathname);
+  console.log(path);
   return (
     <div
       onClick={() => setIsOpenSideModal(false)}

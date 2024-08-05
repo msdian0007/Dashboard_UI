@@ -20,8 +20,8 @@ export const DarkMode = () => {
         }
       />
       <label for="checkbox" class="checkbox-label bg-[--bg-l] ">
-        <IoMdMoon className="fa-moon" />
-        <MdWbSunny className="fa-sun" />
+        <IoMdMoon className="text-sm fa-moon" />
+        <MdWbSunny className="text-sm fa-sun" />
         <span className="ball !bg-[--desc]"></span>
       </label>
     </div>

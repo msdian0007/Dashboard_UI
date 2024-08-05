@@ -1,76 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --bg: #202028;
-    --bg-l: #607274;
-    --bg-d: #141416;
-    --title: #fefefe;
-    --desc: #c9c8cb;
-    --desc-l: rgb(153, 151, 151);
+  --bg: #202028;
+  --bg-l: #607274;
+  --bg-d: #141416;
+  --title: #fefefe;
+  --desc: #c9c8cb;
+  --desc-l: rgb(153, 151, 151);
 }
 
 body {
-    /* background-color: #141416; */
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
+/* NORMAL MODE COLORS */
 .sun {
-    background-color: #F8F6F4;
-    color: #141416;
+  background-color: #F8F6F4;
+  color: #141416;
 }
 
-desc {
-    color: #3434b4;
+.desc {
+  color: #3434b4;
 }
 
+
+/* DARK MODE TOGGLE BUTTON */
 .checkbox {
-    opacity: 0;
-    position: absolute;
-  }
-  
-  .checkbox-label {
-    background-color: #111;
-    width: 50px;
-    height: 22px;
-    border-radius: 50px;
-    position: relative;
-    padding: 5px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .fa-moon {color: #f1c40f;}
-  
-  .fa-sun {color: #f39c12;}
-  
-  .checkbox-label .ball {
-    background-color: #fff;
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    border-radius: 50%;
-    transition: transform 0.2s linear;
-  }
-  
-  .checkbox:checked + .checkbox-label .ball {
-    transform: translateX(24px);
-  }
-  
+  opacity: 0;
+  position: absolute;
+}
 
+.checkbox-label {
+  background-color: #111;
+  width: 44px;
+  height: 22px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+  transform: translateX(22px);
+}
+
+/* TOGGLE DARK MODE IN ANT DESIGN TABLE  */
 .dark .ant-table .ant-table-container .ant-table-content table thead.ant-table-thead .ant-table-cell {
-    background-color: var(--bg);
-    color: #fff;
+  background-color: var(--bg);
+  color: #fff;
 }
 
-
+/* HIDE SCROLL-BAR */
 * {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-*::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
+
+*::-webkit-scrollbar {
+  display: none;
 }
