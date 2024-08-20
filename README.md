@@ -30,6 +30,3 @@ Check out the live application [here](https://msdian0007.github.io/Dashboard_UI/
 ## Contributing
 Feel free to submit issues or pull requests.
 
-## License
-This project is licensed under the MIT License.
-```
