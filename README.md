@@ -1,4 +1,3 @@
-```markdown
 # Dashboard Project
 
 ## Overview
